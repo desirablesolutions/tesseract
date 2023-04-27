@@ -1,0 +1,19 @@
+{
+  "name": "tesseract-master",
+  "version": "1.0.0",
+  "description": "a parametric UI library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desirablesolutions/tesseract.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/desirablesolutions/tesseract/issues"
+  },
+  "homepage": "https://github.com/desirablesolutions/tesseract#readme"
+}
