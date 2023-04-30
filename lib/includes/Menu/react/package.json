@@ -1,18 +1,11 @@
 {
-  "name": "t4-navbar-react",
-  "version": "2.32.5",
+  "name": "t4-menu-react",
+  "version": "2.0.1",
   "main": "dist/t4-navbar-react.js",
-  "type": "module",
   "module": "dist/t4-navbar-react.es.js",
-  "homepage": "https://t4-ui.desirable.solutions",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    }
-  },
+  "homepage": "https://your-company-website.com",
   "bugs": {
-    "url": "https://github.com/desirablesolutions/tesseract/discussions"
+    "url": "https://github.com/your-company/your-repo/issues"
   },
   "author": {
     "name": "Jeffrey Desir",
@@ -35,12 +28,11 @@
   "devDependencies": {
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "@vitejs/plugin-react": "^1.3.2",
+    "@vitejs/plugin-react": "^1.0.0",
     "typescript": "^4.1.2",
-    "vite": "^2.9.15"
+    "vite": "^2.0.0"
   },
   "dependencies": {
-    "blakprint": "^10.0.3",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "vite-plugin-tsconfig-paths": "^1.3.0"
