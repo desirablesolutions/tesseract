@@ -1,9 +1,32 @@
-import * as React from 'react';
-import type { JSXComponentType } from "blakprint/dist/typings";
-import type { NavBarProps } from "src/types";
+import React, { ReactElement, useEffect, useState } from 'react';
 
-export default function NavBar(props: NavBarProps): JSXComponentType<NavBarProps> {
+import type { JSXComponentType } from "blakprint/dist/typings"
+
+import type { NavBarProps } from "@typings/"
+
+export default function NavBar({ componentName }): JSXComponentType<NavBarProps> {
+    const [Component, setComponent] = useState<React.LazyExoticComponent<any> | null>(null);
+
+    useEffect(() => {
+
+        const importComponent = async () => {
+            try {
+                const { default: ImportedComponent } = await import(`./presets/Larry.tsx`);
+                setComponent(React.lazy(() => Promise.resolve(ImportedComponent)));
+            } catch (error) {
+                console.error(`Failed to load component: ${componentName}`, error);
+            }
+        };
+        importComponent();
+    }, [componentName]);
+
+    if (!Component) {
+        return null;
+    }
+
     return (
-       <h1>Hello World</h1>
-    )
-}
+        <React.Suspense fallback={<div>Loading...</div>}>
+            <Component />
+        </React.Suspense>
+    );
+};

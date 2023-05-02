@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-
 export default function LarryNavBarPreset() {
   <section>
     <nav className="relative z-50 py-6 bg-transparent">

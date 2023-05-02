@@ -1,10 +1,10 @@
 {
-  "name": "tesseract-master",
+  "name": "tesseract-ui",
   "version": "1.0.0",
-  "description": "a parametric UI library.",
+  "description": "a generous, generically typed, parametric UI library.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "g:readme": "npx @appnest/readme generate --config=docs.config.json",
   },
   "repository": {
     "type": "git",

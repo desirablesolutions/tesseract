@@ -1,3 +1,5 @@
 import type { JSXComponentType } from "blakprint/dist/typings";
-import type { NavBarProps } from "src/types";
-export default function NavBar(props: NavBarProps): JSXComponentType<NavBarProps>;
+import type { NavBarProps } from "@typings/";
+export default function NavBar({ componentName }: {
+    componentName: any;
+}): JSXComponentType<NavBarProps>;
