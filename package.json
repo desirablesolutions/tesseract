@@ -4,6 +4,7 @@
   "description": "a generous, generically typed, parametric UI library.",
   "main": "index.js",
   "scripts": {
+    "build": "gulp --gulpfile build/gulp/index.js",
     "g:readme": "npx @appnest/readme generate --config=docs.config.json"
   },
   "repository": {
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/desirablesolutions/tesseract/issues"
   },
-  "homepage": "https://github.com/desirablesolutions/tesseract#readme"
+  "homepage": "https://github.com/desirablesolutions/tesseract#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "rollup": "^3.21.3",
+    "rollup-plugin-typescript2": "^0.34.1"
+  }
 }

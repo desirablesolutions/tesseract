@@ -1,1 +1,1 @@
-<h4 align="center"><img src="./logo.png" height="248px" width="248px"></h4>
+<h4 align="center"><img src="https://github.com/desirablesolutions/tesseract/blob/main/docs/logo.png" height="248px" width="248px"></h4>
