@@ -1,2 +1,7 @@
 (load:docs/TITLE.md)
+(load:docs/LOGO.md)
+(load:docs/TECHNOLOGIES.md)
 (load:docs/INTRODUCTION.md)
+(load:docs/CHANGELOG.md)
+(load:docs/COPYRIGHT.md)
+(load:docs/LINCENSE.md)

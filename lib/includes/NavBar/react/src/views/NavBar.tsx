@@ -1,32 +1,21 @@
-import React, { ReactElement, useEffect, useState } from 'react';
+import React from 'react';
+import htm from 'htm';
 
-import type { JSXComponentType } from "blakprint/dist/typings"
 
-import type { NavBarProps } from "@typings/"
+export function templateToReact(templateFn): React.ReactElement {
+    const html = htm.bind(React.createElement);
 
-export default function NavBar({ componentName }): JSXComponentType<NavBarProps> {
-    const [Component, setComponent] = useState<React.LazyExoticComponent<any> | null>(null);
+    return function ReactComponent(props): React.ReactElement {
+        return templateFn(html, props);
+    };
+}
 
-    useEffect(() => {
+export default function Larry(html, { message: string }) {
+    return html`
+      <div>
+        Larry Component - ${message}
+      </div>
+    `;
+}
 
-        const importComponent = async () => {
-            try {
-                const { default: ImportedComponent } = await import(`./presets/Larry.tsx`);
-                setComponent(React.lazy(() => Promise.resolve(ImportedComponent)));
-            } catch (error) {
-                console.error(`Failed to load component: ${componentName}`, error);
-            }
-        };
-        importComponent();
-    }, [componentName]);
-
-    if (!Component) {
-        return null;
-    }
-
-    return (
-        <React.Suspense fallback={<div>Loading...</div>}>
-            <Component />
-        </React.Suspense>
-    );
-};
+const LarryComponent = templateToReact(Larry);

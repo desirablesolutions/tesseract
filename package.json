@@ -4,7 +4,7 @@
   "description": "a generous, generically typed, parametric UI library.",
   "main": "index.js",
   "scripts": {
-    "g:readme": "npx @appnest/readme generate --config=docs.config.json",
+    "g:readme": "npx @appnest/readme generate --config=docs.config.json"
   },
   "repository": {
     "type": "git",
