@@ -1,5 +1,3 @@
-export { default as NavBar } from "./templates/NavBar";
-export { default as David } from "./templates/David";
-export { default as Johnathan } from "./templates/Johnathan";
-export { default as Samantha } from "./templates/Samantha";
+export * as templates from "./templates"
+export { default as NavBar } from "./NavBar"
 export type * from "./types"

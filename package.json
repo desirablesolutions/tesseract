@@ -11,8 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/desirablesolutions/tesseract.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jeffrey Desir",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/desirablesolutions/tesseract/issues"
   },
