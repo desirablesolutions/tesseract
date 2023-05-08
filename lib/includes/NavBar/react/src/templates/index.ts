@@ -1,5 +1,7 @@
 export { default as Ava } from "./Ava"
 export { default as Delilah } from "./Delilah"
+export { default as Blake } from "./Blake"
+
 export { default as Celeste } from "./Celeste"
 export { default as Fiona } from "./Fiona"
 export { default as Giselle } from "./Giselle"
