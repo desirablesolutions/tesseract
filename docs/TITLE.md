@@ -1,1 +1,1 @@
-<h2 align="center">Tesseract UI Kit</h2>
+<h2 align="center">Tesseract</h2>

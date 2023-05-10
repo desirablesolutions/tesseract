@@ -1,7 +1,7 @@
 {
-  "name": "t4-utils-react",
+  "name": "t4-utils-ts",
   "version": "9.0.3",
-  "description": "t4-navbar-react",
+  "description": "t4-utils-ts",
   "private": false,
   "main": "./dist/index.js",
   "exports": {
