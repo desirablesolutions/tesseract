@@ -1,13 +1,17 @@
 import type { ViewType } from "blakprint/dist/typings"
 
-export type T4TemplateNamesType = "ava" | "blake" | "celeste" | "delilah" | "ella" | "fiona"
+export type T4TemplateNamesType = "ava" | "blake" | "celeste" | "delilah" | "ella" | "fiona"  | "giselle" | "harper"  | "isabella" | "jade" | "kairos" | "lila"
 
 export type T4TriggerNamesType = "click" | "hover" | "touch" | "scroll" | "load" | "visible" | "idle"
 
 export type T4AlignmentStylesType = "left" | "center" | "right"
 
-export type T4ComponentProps = {
-    template?: T4TemplateNamesType
+export type T4ComponentProps = NonNullable<{
+    template: Record<T4TemplateNamesType, Function>,
+    target: {
+        name?: string,
+        parser?: any
+    },
     sx?: {
         on?: Record<T4TriggerNamesType, any>,
         color?: string,
@@ -16,7 +20,7 @@ export type T4ComponentProps = {
         borderColor?: string,
         roundness?: number
     }
-}
+}>
 
 
 export type T4ViewType = (props: any) => ViewType<any, any>

@@ -1,18 +1,16 @@
-import { html } from "htm/react"
-import type { ViewType } from "blakprint/dist/typings"
+import type { T4ComponentProps, T4TemplateProps, T4ViewType } from "./types"
 
 
-
-export function $template(props: TessereactTemplateProps) {
+export function $template(props: T4TemplateProps) {
     return {
         ...props
     }
 }
 
-export function $component<PropTypes>(data: TesseractComponentProps): TesseractViewType {
+export function $component<PropTypes>(data: T4ComponentProps): T4ViewType {
 
     return function <PropTypes>(props: PropTypes) {
-        return html`${data.closure()}`
+        return data.target.parser`${data.template.}`
     }
 }
 
