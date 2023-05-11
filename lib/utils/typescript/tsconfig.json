@@ -1,36 +1,18 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
-    "jsx": "react",
-    "moduleResolution": "node",
+    "target": "ESNext",
+    "module": "ESNext",
     "declaration": true,
-    "esModuleInterop": true,
-    "allowImportingTsExtensions": true,
-    "emitDeclarationOnly": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": false,
     "outDir": "dist",
-    "rootDir": "src",
+    "strict": true,
+    "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "src/*": [
-        "src/*"
-      ],
-      "@views/*": [
-        "src/templates/*"
-      ],
-      "@typings/*": [
-        "src/types.d.ts"
-      ]
-    }
+      "t4-utils-ts/*": ["dist/*"]
+    },
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

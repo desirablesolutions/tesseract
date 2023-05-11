@@ -1,31 +1,18 @@
-import { htm } from "htm/react"
-
-import type { ViewType } from "blakprint/typings"
-
-
-export type TargetProps = any
-
-export type TesseractViewType = ViewType<{ any }>
+import { html } from "htm/react"
+import type { ViewType } from "blakprint/dist/typings"
 
 
-type TargetOptions = "react" | "preact" | "reactNative" | "html"
 
-export function $component<PropTypes>(target?: TargetProps, props?: PropTypes): TesseractViewType {
-
-    return function (props) {
-        return htm`${props.children}`
+export function $template(props: TessereactTemplateProps) {
+    return {
+        ...props
     }
-
 }
 
+export function $component<PropTypes>(data: TesseractComponentProps): TesseractViewType {
 
-const NavBar = $component<any>((props) => { 
+    return function <PropTypes>(props: PropTypes) {
+        return html`${data.closure()}`
+    }
+}
 
-    return htm`<div>
-    
-    <section className=${props.className}}>
-    
-    </section>
-    </div>`
-
-})
