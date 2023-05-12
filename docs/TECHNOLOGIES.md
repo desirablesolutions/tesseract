@@ -1,3 +1,5 @@
 <h2>Technologies</h2>
 
-> This is a list of technologies used in the project.
+**dependencies**
+1. [react](https://www.npmjs.com/package/react)
+2. 

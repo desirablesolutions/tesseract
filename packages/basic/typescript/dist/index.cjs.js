@@ -1,0 +1,13 @@
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});var i=require("react");function v(e){return e&&typeof e=="object"&&"default"in e?e:{default:e}}function O(e){if(e&&e.__esModule)return e;var r=Object.create(null,{[Symbol.toStringTag]:{value:"Module"}});return e&&Object.keys(e).forEach(function(t){if(t!=="default"){var n=Object.getOwnPropertyDescriptor(e,t);Object.defineProperty(r,t,n.get?n:{enumerable:!0,get:function(){return e[t]}})}}),r.default=e,Object.freeze(r)}var s=v(i),d={exports:{}},l={};/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/var p=Object.getOwnPropertySymbols,j=Object.prototype.hasOwnProperty,g=Object.prototype.propertyIsEnumerable;function _(e){if(e==null)throw new TypeError("Object.assign cannot be called with null or undefined");return Object(e)}function h(){try{if(!Object.assign)return!1;var e=new String("abc");if(e[5]="de",Object.getOwnPropertyNames(e)[0]==="5")return!1;for(var r={},t=0;t<10;t++)r["_"+String.fromCharCode(t)]=t;var n=Object.getOwnPropertyNames(r).map(function(a){return r[a]});if(n.join("")!=="0123456789")return!1;var o={};return"abcdefghijklmnopqrst".split("").forEach(function(a){o[a]=a}),Object.keys(Object.assign({},o)).join("")==="abcdefghijklmnopqrst"}catch{return!1}}h();/** @license React v17.0.2
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */var w=s.default,m=60103;l.Fragment=60107;if(typeof Symbol=="function"&&Symbol.for){var b=Symbol.for;m=b("react.element"),l.Fragment=b("react.fragment")}var S=w.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,P=Object.prototype.hasOwnProperty,E={key:!0,ref:!0,__self:!0,__source:!0};function y(e,r,t){var n,o={},a=null,u=null;t!==void 0&&(a=""+t),r.key!==void 0&&(a=""+r.key),r.ref!==void 0&&(u=r.ref);for(n in r)P.call(r,n)&&!E.hasOwnProperty(n)&&(o[n]=r[n]);if(e&&e.defaultProps)for(n in r=e.defaultProps,r)o[n]===void 0&&(o[n]=r[n]);return{$$typeof:m,type:e,key:a,ref:u,props:o,_owner:S.current}}l.jsx=y;l.jsxs=y;d.exports=l;const c=d.exports.jsx;function x({componentName:e}){const[r,t]=i.useState(null);return i.useEffect(()=>{(async()=>{try{const{default:o}=await function(a){return Promise.resolve().then(function(){return O(require(a))})}("./presets/Larry");t(s.default.lazy(()=>Promise.resolve(o)))}catch(o){console.error(`Failed to load component: ${e}`,o)}})()},[e]),r?c(s.default.Suspense,{fallback:c("div",{children:"Loading..."}),children:c(r,{})}):null}exports.NavBar=x;
+//# sourceMappingURL=index.cjs.js.map

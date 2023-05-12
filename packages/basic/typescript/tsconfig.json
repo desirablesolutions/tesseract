@@ -10,7 +10,6 @@
     "moduleResolution": "node",
     "declaration": true,
     "esModuleInterop": true,
-    "allowImportingTsExtensions": true,
     "emitDeclarationOnly": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
