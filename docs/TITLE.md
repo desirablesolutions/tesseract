@@ -1,2 +1,2 @@
-<h2 align="center">Tesseract</h2>
+<h1 align="center">Tesseract</h1>
 

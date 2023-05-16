@@ -8,7 +8,9 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "t4-utils-ts/*": ["dist/*"]
+      "t4-utils-ts/*": ["dist/*"],
+      "@types/*": ["src/types.d.ts"],
+      "@/*": ["src/*"]
     },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true

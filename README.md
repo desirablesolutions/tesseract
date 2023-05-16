@@ -1,12 +1,15 @@
-<!-- ⚠️ This README has been generated from the file(s) "DOCUMENTATION.md" ⚠️--><h2 align="center">Tesseract</h2>
+<!-- ⚠️ This README has been generated from the file(s) "DOCUMENTATION.md" ⚠️--><h1 align="center">Tesseract</h1>
 
-
-<h4 align="center">⏹️A generous, generically typed, parametric UI kit for Typescript projects.</h4>
 
 <h4 align="center"><img src="https://github.com/desirablesolutions/tesseract/blob/main/docs/logo.png" height="260px" width="260px"></h4>
+
 <h2>🌟Usage</h2>
 
-**choose a package**
+[_Read more in lib ->_]/lib
+
+**typescript**
+
+1. **choose a package**
 
 ```bash
 
@@ -14,39 +17,63 @@ npm i t4-basic-ts
 
 ```
 
-**...or someponents you need**
+**or**
+
+1. **some components you need**
 
 ```bash
 npm i t4-navbar-ts t4-footer-ts t4-button-ts
 ```
 
-**then import and configure your components.**
+2. **import and configure your components.**
 
 ```javascript
-import { Navbar as T4NB } from "t4-navbar-ts";
+import { Navbar as T4NavBar } from "t4-navbar-ts";
 import { Footer as T4Footer } from "t4-footer-ts";
 import { Button as T4Button } from "t4-button-ts";
 
 
-const navStyles = {
+const themeSx = {
     bg: "black",
+    fg: "white",
+    text: themeSx.fg,
+    fx: {
+        glassmorphism: {
+            strength: "md"
+        }
+    },
     on: {
         hover: {
             color: "white",
             bg: "black",
             duration: "0.5s",
         },
+        click: {
+            outline: {
+                color: "white",
+                size: "2px",
+                duration: "0.5s ease-in-out"
+            }
+        }
         }
     }
 }
 
-export const NavBar = T4NB({ target: "react", template: "blake", sx: navStyles })
+export const NavBar = T4NavBar({ target: "react", template: "blake", sx: themeSx })
+
+export const Button = T4Button({ target: "react", template: "blake", sx: themeSx })
+
+export const Footer = T4Footer({ target: "react", template: "blake", sx: themeSx })
 
 
-const App = props => {
+const Page = props => {
 
     return (
-        <NavBar {...props}/>
+       <>
+        <NavBar {...props?.navBar}/>
+        <Button {...props?.buton}/>
+        <Footer {...props?.footer}/>
+       </>
     )
 }
 ```
@@ -54,8 +81,10 @@ const App = props => {
 <h2>Technologies</h2>
 
 **dependencies**
-1. [react](https://www.npmjs.com/package/react)
-2. 
+1. [htm](https://www.npmjs.com/package/htm)
+2. [vite]
+3. [framer-motion]
+4. [tailwindCSS]
 <h2>Application</h2>
 <h2>📦Packages</h2>
 
@@ -64,17 +93,26 @@ const App = props => {
 1. basic
 2. tiny
 3. full
-<h2>Library</h2>
+<h2>Acknowledgements</h2>
 
-> This is a library of useful functions that can be used in your projects.
-
+1. **God** 
+2. **GPT-4**
+3. 
 <h2>⏳Changelog</h2>
+
+<h2>📜License</h2>
+
+> This project is under the GPL-3.0-version license. ☂️
 
 <h2>©️Copyright</h2>
 
-> ©️ 2023 Désirable Solutions. All Rights Reserved.
+**©️ 2023 Désirable Solutions. All Rights Reserved.**
 
-<h2>License</h2>
+<h4 align="center">A generous, hyper-dimensional, framework-agnostic, parametric, UI-component library.</h4>
 
-> This project is under the GPL-3.0-version license.
+
+---
+
+<h4 align="center">Made with 💖.</h4>
+
 
