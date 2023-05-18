@@ -1,10 +1,13 @@
 
 import type { ViewCreator, ComponentProps, TemplateName, TemplateRegistry } from './types';
+import * as templates from './templates';
 
 export default function $component<Props>(data: ComponentProps): ViewCreator {
     let template: Template<Props>;
     let target: Target;
 
+    let readTemplate = data?.templates ?? templates
+    
     if (typeof data.template === 'string') {
         template = templates[data.template];
         if (!template) {
@@ -26,7 +29,7 @@ export default function $component<Props>(data: ComponentProps): ViewCreator {
     return function (props: Props) {
         return target.parser([template(props)]);
     }
-    
+
 }
 
 

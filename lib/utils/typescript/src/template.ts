@@ -2,7 +2,7 @@ import type { ViewCreator, ComponentProps, TemplateName, TemplateRegistry, Templ
 
 export const templates: TemplateRegistry = {};
 
-export default function $template<Props>(params: TemplateProps) {
+export default function $template<Props>(params: any) {
     templates[params.name] = (props: Props) => `${params.template(props)}`;
 }
 

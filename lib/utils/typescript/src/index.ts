@@ -4,3 +4,5 @@ export * as template from "./template"
 
 export { default as $template } from "./template"
 export { default as $component } from "./component"
+
+export type * as typings from "./types"

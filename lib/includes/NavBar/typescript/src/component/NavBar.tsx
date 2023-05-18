@@ -1,17 +1,15 @@
 import { $component } from "t4-utils-ts"
 
 export type NavBarProps = {
-
+    favicon?: any
 }
 
-export default function NavBar(props: NavBarProps) {
-    return $component({
-        closure: () => {
-            `<div>
-    
-    </div>`}
-    })
-}
+const NavBar = $component<NavBarProps>({
+    closure: () => {
+        return (
+            `<div>NavBar</div>`
+        )
+    }
+})
 
-
-
+export default NavBar

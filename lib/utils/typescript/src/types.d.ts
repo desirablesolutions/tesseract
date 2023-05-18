@@ -19,13 +19,13 @@ export type TemplateRegistry = {
     [K in TemplateName]?: Template;
 }
 
-export interface SXStyle {
-    on?: Record<TriggerName, unknown>,
-    color?: string,
-    bgColor?: string,
-    alignment?: AlignmentStyle,
-    borderColor?: string,
-    roundness?: number
+export interface StylizerProps<TriggerTypes = unknown> {
+    on?: Record<TriggerName, TriggerTypes>,
+    fg?: any,
+    bg?: any,
+    layout?: any,
+    text?: any,
+    fx?: any,
 }
 
 export interface TargetProps {
@@ -44,7 +44,7 @@ export interface TemplateProps {
 export interface ComponentProps {
     template: Record<TemplateName, Function>,
     target: TargetProps,
-    view: any,
+    view: ViewType<any, any>,
     sx?: SXStyle
 }
 

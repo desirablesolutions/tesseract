@@ -1,8 +1,17 @@
-import { $template } from "../index"
+import $template from "../template"
 
-export const Blake = $template({
-    name: "blake",
-    template: (props) => `${props.children}`,
+const Ava = $template({
+    name: "ava",
+    template: (props) => {
+        return {
+            fg: [],
+            bg: [],
+            text: [],
+            headings: [],
+            fx: [],
+            ...props
+        }
+    },
     meta: {
         tags: "Confident, Daring, Striking",
         description: `Blake Boldness showcases a daring design with bold typography,
@@ -11,4 +20,4 @@ export const Blake = $template({
     }
 })
 
-
+export default Ava
