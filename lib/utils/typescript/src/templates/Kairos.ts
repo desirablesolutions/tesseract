@@ -2,7 +2,13 @@ import { $template } from "../index"
 
 export const Blake = $template({
     name: "blake",
-    template: (props) => `${props.children}`,
+    template: (props) => {
+        return {
+            on: {
+
+            },
+        }
+    },
     meta: {
         tags: "Confident, Daring, Striking",
         description: `Blake Boldness showcases a daring design with bold typography,

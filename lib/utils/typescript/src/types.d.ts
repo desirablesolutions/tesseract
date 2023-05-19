@@ -8,6 +8,8 @@ export type AlignmentStyle = "left" | "center" | "right"
 
 export type TargetOption = "react" | "preact" | "svelte" | "vue"
 
+export type LayoutPositionTypes = "relative" | "absolute" | "fixed" | "sticky" | "static" | "inherit" | "initial" | "unset"
+
 export type Target = {
     name?: string,
     parser?: Function
@@ -19,21 +21,67 @@ export type TemplateRegistry = {
     [K in TemplateName]?: Template;
 }
 
-export interface StylizerProps<TriggerTypes = unknown> {
-    on?: Record<TriggerName, TriggerTypes>,
-    fg?: any,
-    bg?: any,
-    layout?: any,
-    text?: any,
-    fx?: any,
+
+export type LayoutSxProps = {
+    height?: string | number,
+    width?: string | number,
+    position?: LayoutPositionTypes,
 }
 
-export interface TargetProps {
+export type TextSxProps = {
+    size: string | number,
+    fontFamily: string,
+    modes: string[],
+    color: string,
+}
+
+export type SpecialEffectsNameTypes = "roundness" | "glassiness"
+
+export type SpecialEffectsProps<T> = {
+    roundness?: {
+
+    },
+
+    glassiness?: {},
+    depth?: {},
+    animate?: {
+        in: {},
+        out?: {}
+    }
+
+
+} & T
+
+
+export type Canvas<T> = {
+    color?: string,
+    zIndex?: number
+} & T
+
+export type BackgroundSxProps = Canvas<{
+
+}>
+
+export type ForegroundSxProps = Canvas<{
+
+}>
+
+export interface StylizerProps<TriggerTypes = unknown> {
+    on?: Record<TriggerName, TriggerTypes>,
+    fg?: ForegroundSxProps,
+    bg?: BackgroundSxProps,
+    layout?: LayoutSxProps,
+    text?: TextSxProps,
+    fx?: SpecialEffectsProps<any>,
+    children?: StylizerProps<any>
+}
+
+export type TargetProps = {
     name?: string,
     parser?: Function | Promise<Function>
 }
 
-export interface TemplateProps {
+export type TemplateProps = {
     meta?: {
         name?: string,
         tags?: string | string[],
@@ -45,11 +93,8 @@ export interface ComponentProps {
     template: Record<TemplateName, Function>,
     target: TargetProps,
     view: ViewType<any, any>,
-    sx?: SXStyle
+    sx?: StylizerProps
 }
-
-export type ViewCreator = (props: any) => ViewType<any, any>
-
 
 export type TemplateProps = {
     name: TemplateName,

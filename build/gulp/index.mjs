@@ -5,8 +5,7 @@ import gulp from "gulp"
 import chalk from "chalk"
 
 const promisify = util.promisify;
-
-var exec = child_process.exec;
+const exec = child_process.exec;
 
 gulp.task('readme', async () => {
 
@@ -14,7 +13,7 @@ gulp.task('readme', async () => {
 
   console.log(chalk.blue('Generating README'));
 
-  const { stdout, stderr } = await execAsync('npx @appnest/readme generate --docs=config.doc.json');
+  const { stdout, stderr } = await execAsync('cd ../../ && npx @appnest/readme generate --config=docs.config.json');
 
   console.log(stdout);
   console.error(stderr);
