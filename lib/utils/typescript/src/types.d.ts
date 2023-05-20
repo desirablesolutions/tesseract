@@ -1,31 +1,32 @@
 import type { ViewType } from "blakprint/dist/typings"
 
-export type TemplateName = "ava" | "blake" | "celeste" | "delilah" | "ella" | "fiona" | "giselle" | "harper" | "isabella" | "jade" | "kairos" | "lila"
+export type TemplateNames = "ava" | "blake" | "celeste" | "delilah" | "ella" | "fiona" | "giselle" | "harper" | "isabella" | "jade" | "kairos" | "lila"
 
-export type TriggerName = "click" | "hover" | "touch" | "scroll" | "load" | "visible" | "idle"
+export type TriggerTypeNames = "click" | "hover" | "touch" | "scroll" | "load" | "visible" | "idle"
 
-export type AlignmentStyle = "left" | "center" | "right"
+export type AlignmentStyleNames = "left" | "center" | "right"
+export type ComponentTypeNames = "react" | "t4"
 
-export type TargetOption = "react" | "preact" | "svelte" | "vue"
+export type TargetOptionNames = "react" | "preact" | "svelte" | "vue"
 
-export type LayoutPositionTypes = "relative" | "absolute" | "fixed" | "sticky" | "static" | "inherit" | "initial" | "unset"
+export type LayoutPositionNames = "relative" | "absolute" | "fixed" | "sticky" | "static" | "inherit" | "initial" | "unset"
 
-export type Target = {
-    name?: string,
-    parser?: Function
+export type TargetType = {
+    name: string,
+    parser: <T> (stream: any) => T
 }
 
 export type Template<Props = any> = (props: Props) => any;
 
 export type TemplateRegistry = {
-    [K in TemplateName]?: Template;
+    [K in TemplateNames]?: Template;
 }
 
 
 export type LayoutSxProps = {
     height?: string | number,
     width?: string | number,
-    position?: LayoutPositionTypes,
+    position?: LayoutPositionNames,
 }
 
 export type TextSxProps = {
@@ -76,12 +77,15 @@ export interface StylizerProps<TriggerTypes = unknown> {
     children?: StylizerProps<any>
 }
 
-export type TargetProps = {
-    name?: string,
-    parser?: Function | Promise<Function>
+export type ComponentTargetType<TargetType = unknown> = {
+    name: string,
+    parser?: (stream: string) => TargetType | Promise<Function>
 }
 
-export type TemplateProps = {
+export type TemplateTypeParams = {
+    sx: <T>(props: T) => StylizerProps,
+    variants?: any,
+    actions?: any,
     meta?: {
         name?: string,
         tags?: string | string[],
@@ -89,14 +93,11 @@ export type TemplateProps = {
     },
 }
 
-export interface ComponentProps {
-    template: Record<TemplateName, Function>,
-    target: TargetProps,
-    view: ViewType<any, any>,
-    sx?: StylizerProps
+
+export type TesseractComponentParams<PropTypes> = {
+    type: ComponentTypeNames,
+    view: (props?: PropTypes) => ViewType<PropTypes, unknown>,
+    defaultProps?: PropTypes,
+    templates?: TemplateType[]
 }
 
-export type TemplateProps = {
-    name: TemplateName,
-    template: (props: Props) => string, meta?: any
-}

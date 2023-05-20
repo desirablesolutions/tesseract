@@ -1,8 +1,8 @@
-import type { TemplateRegistry, TemplateProps } from './types';
+import type { TemplateRegistry, TemplateTypeParams } from './types';
 
-export const templates: TemplateRegistry = {};
+export let templates: TemplateRegistry = {};
 
-export default function $template<Props>(params: any) {
+export default function $template<Props>(params: TemplateTypeParams) {
     const { bg, fg, text } = params.sx
 }
 

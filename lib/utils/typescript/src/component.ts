@@ -1,40 +1,33 @@
 
-import type { ViewCreator, ComponentProps, TemplateName, TemplateRegistry } from './types';
+import type { TesseractComponentParams } from './types';
 import * as templates from './templates';
+import type { JSXComponentType, ViewCreatorType } from "blakprint/dist/typings"
+import { html } from "htm/react"
 
-export default function $component<Props>(data: ComponentProps): ViewCreator {
-    let template: Template<Props>;
-    let target: Target;
+export default function $component<PropType, MetaTypes>(data: TesseractComponentParams<PropType>): ViewCreatorType {
 
-    let readTemplate = data?.templates ?? templates
-    
-    if (typeof data.template === 'string') {
-        template = templates[data.template];
-        if (!template) {
-            throw new Error(`Template "${data.template}" not found.`);
+    const ViewCreator = {
+        templateRegistry: data?.templates || templates,,
+        data: function (params: { template?: "default" | "ava", sx?: any }) {
+            return data.view
         }
-    } else {
-        template = data.template;
     }
-
-    if (typeof data.target === 'string') {
-        target = targets[data.target];
-        if (!target) {
-            throw new Error(`Target "${data.target}" not found.`);
-        }
-    } else {
-        target = data.target;
-    }
-
-    return function (props: Props) {
-        return target.parser([template(props)]);
-    }
-
+    return ViewCreator
 }
 
 
+const NavBar = $component({
+    type: "react",
+    view: (props: any): JSXComponentType<any, any> => {
+        return (
+            html`<div>
+                <main>
+                    ${props.children}
+                </main>
+            </div>`
+        )
+    }
+})
 
-
-
-
+const MyNav = NavBar({ template: "default", sx: {} }).data
 
