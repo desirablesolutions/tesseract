@@ -1,3 +1,3 @@
-export { default as NavBar } from "./component/NavBar"
+export { default as NavBar } from "./NavBar"
 
 export type * from "./types"

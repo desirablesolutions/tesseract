@@ -5,18 +5,13 @@ import type { JSXComponentType } from "blakprint/dist/typings"
 
 import { html } from "htm/react"
 
-export default function $component<PropType, MetaTypes>(data: TesseractComponentParams<PropType>): ViewCreatorType {
+export function defineTesseractComponent() {
 
-
-    type ComponentTypeParams = {
-        template?: "default",
-        sx?: any
-    }
-
-    const result = function ({ template, sx }: ComponentTypeParams) {
-        return data.view
-    }
-
-    return result as ViewCreatorType
+    return defineComponent(() => {
+        return {
+            render: (params: TesseractComponentParams) => {
+                return html`${templates.tesseractComponent(params)}`
+            }
+        }
+    })
 }
-

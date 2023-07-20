@@ -1,3 +1,5 @@
+import { defineComponent } from "nonw"
+
 export type TagProps = {
     name?: string;
   };
