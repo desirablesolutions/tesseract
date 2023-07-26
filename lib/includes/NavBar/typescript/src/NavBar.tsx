@@ -1,10 +1,7 @@
-import * as React from "react";
 
-import { defineComponent, ComponentType } from "blakprint";
+import { html } from 'htm/react';
 
 export default function NavBar() {
-  return defineComponent((props: any) => {
-    return <header></header>;
-  });
+  return html`<h1></h1>`
 }
 
