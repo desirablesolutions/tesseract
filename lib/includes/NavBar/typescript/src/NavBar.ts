@@ -1,11 +1,17 @@
 import { html } from "htm/react";
+import { defineComponent } from "blakprint"
+import Container from "./Container"
 
-export default function NavBar(props: any) {
+export type NavBarProps= {
+  title?: string | Element
+}
+
+export default function NavBar(props: NavBarProps) {
 
   const { title }  = props;
 
-  
-  return html`<section>
+  const Component = defineComponent(
+    () => html`<section>
     <nav class="relative py-6 bg-black z-50">
       <div class="container px-4 mx-auto">
         <div class="flex items-center relative">
@@ -201,5 +207,8 @@ export default function NavBar(props: any) {
         </div>
       </nav>
     </div>
-  </section>`;
+  </section>`
+  )
+
+  return Component
 }
