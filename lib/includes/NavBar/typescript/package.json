@@ -44,7 +44,7 @@
     "vite-plugin-dts": "^2.3.0"
   },
   "dependencies": {
-    "blakprint": "^13.2.31",
+    "blakprint": "^13.3.1",
     "htm": "^3.1.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",

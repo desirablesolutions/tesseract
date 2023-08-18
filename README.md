@@ -2,7 +2,21 @@
 <h4 align="center">A generous, hyper-dimensional, framework-agnostic, parametric, UI-component library.</h4>
 
 <h4 align="center"><img src="https://github.com/desirablesolutions/tesseract/blob/main/docs/logo.png" height="260px" width="260px"></h4>
+<h2>Screenshots</h2>
+<h2>✨Features</h2>
 
+* TailwindCSS-first class names.
+* Unique customization schema with style-focused proper-named templates.
+* Compile-time & run-time template literal parser for targeting any framework. (it's just STL & pure functions😆)
+* Clear and clean customizations.
+* Generic types & definition functors provided through [Blakprint](https://blakprint.pro)
+* Multiple packge types and sizes.
+* Multiple CDN access.
+<h2>Installation</h2>
+
+```bash
+npm i t4-[package]-[specific | agnosic] 
+```
 <h2>🌟Usage</h2>
 
 **typescript**
@@ -83,28 +97,43 @@ export const Page = props => {
 2. [vite]
 3. [framer-motion]
 4. [tailwindCSS]
-<h2>Application</h2>
 <h2>📦Packages</h2>
+
+**types**
+
+1. **Framework Specific**
+   1. [React]
+   2. [Qwik]
+2. **Framework Agnostic**
+   1. T4-Intermidary Format --> Custom Parser Target.
+
+---
 
 **options**
 
 1. basic
+   1. [framework-speicific
+      1. react
+      2. `bash npm i t4-basic-react`
 2. tiny
 3. full
-<h2>Acknowledgements</h2>
 
-1. **God** 
-2. **GPT-4**
-3. 
+---
+
+(load:docs/AUTHORS.md)
+(load:docs/ACKNOWLEDGEMENTS.md)
 (load:docs/ISSUES.md)
 <h2>⏳Changelog</h2>
 
-<h2>📜License</h2>
 
-> This project is under the GPL-3.0-version license. ☂️
+
+<h3>v2.0.0</h3>
 
 <h2>©️Copyright</h2>
 
 **©️ 2023 Désirable Solutions. All Rights Reserved.**
 
+<h2>📜License</h2>
+
+> This project is under the GPL-3.0-version license. ☂️
 

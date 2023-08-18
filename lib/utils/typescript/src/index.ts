@@ -1,8 +1,2 @@
-export * as component from "./component"
-export * as templates from "./templates"
-export * as template from "./template"
+export { columnSpan } from "./columnSpan"
 
-export { default as $template } from "./template"
-export { default as $component } from "./component"
-
-export type * as typings from "./types"
