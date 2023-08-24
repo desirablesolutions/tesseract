@@ -1,2 +1,0 @@
-export { columnSpan } from "./columnSpan"
-

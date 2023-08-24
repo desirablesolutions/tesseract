@@ -1,6 +1,6 @@
 <h2>📦Packages</h2>
 
-**types**
+**Platforms**
 
 1. **Framework Specific**
    1. [React]()
@@ -10,13 +10,11 @@
 
 ---
 
-**options**
+**Options**
 
-1. basic
-   1. [framework-speicific
-      1. react
-      2. `bash npm i t4-basic-react`
+1. core
 2. tiny
 3. full
+4. fancy
 
 ---

@@ -13,10 +13,19 @@ gulp.task('readme', async () => {
 
   console.log(chalk.blue('Generating README'));
 
-  const { stdout, stderr } = await execAsync('cd ../../ && npx @appnest/readme generate --config=docs.config.json');
+  const directories = [
+    "lib"
+  ]
+
+  const { stdout, stderr } = await execAsync(' npx @appnest/readme generate --config=docs.config.json');
 
   console.log(stdout);
   console.error(stderr);
 });
 
 gulp.task('default', gulp.series('readme'));
+
+
+function getModulePaths() {
+  return null
+}
