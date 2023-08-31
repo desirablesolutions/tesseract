@@ -1,2 +1,3 @@
-export { accessibility } from "./accessibility";
-export { screenReader } from "./screenReader";
+export * from "./accessibility";
+export * from "./screenReader";
+export * from "./presets";

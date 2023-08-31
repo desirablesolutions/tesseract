@@ -1,3 +1,7 @@
-import type { PresetType } from "../types/types";
-export declare const serializeClasses: import("blakprint").UtilityType<typeof import("clsx").clsx, typeof import("clsx").clsx, unknown>;
-export declare function processPreset(preset: PresetType): string;
+import { Definition } from "blakprint";
+import type { PresetType } from "..";
+export declare const serializeClasses: import("blakprint").UtilityType<string | string[], string, Error>;
+export declare function defineStylizer<BaseParameters>({ preset, overrides, }: {
+    preset: PresetType<BaseParameters>;
+    overrides?: BaseParameters;
+}): Definition<BaseParameters, string, Error>;

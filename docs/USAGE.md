@@ -6,24 +6,16 @@
 
 ```bash
 
-npm i t4-basic-ts
+npm i t4@latest
 
 ```
 
-**or**
 
-1. **some components you need**
 
-```bash
-npm i t4-navbar-ts t4-footer-ts t4-button-ts
-```
-
-2. **import and configure your components.**
+1. **import and configure your components.**
 
 ```javascript
-import { Navbar as T4NavBar } from "t4-navbar-ts";
-import { Footer as T4Footer } from "t4-footer-ts";
-import { Button as T4Button } from "t4-button-ts";
+import { defineNavBar } from "t4";
 
 
 const themeSx: T4StylizerProps = {
@@ -52,11 +44,7 @@ const themeSx: T4StylizerProps = {
     }
 }
 
-export const NavBar = T4NavBar({ target: "react", template: "blake", sx: themeSx })
-
-export const Button = T4Button({ target: "react", template: "blake", sx: themeSx })
-
-export const Footer = T4Footer({ target: "react", template: "blake", sx: themeSx })
+export const NavBar = defineNavBar({ target: "react", template: "blake", sx: themeSx })
 
 
 export const Page = (props) => {

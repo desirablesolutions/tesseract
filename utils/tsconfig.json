@@ -4,11 +4,12 @@
     "module": "ESNext",
     "declaration": true,
     "outDir": "dist",
+    "skipLibCheck": true,
     "strict": true,
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "t4-utils-ts/*": ["dist/*"],
+      "t4-utils/*": ["dist/*"],
       "@types/*": ["src/types.d.ts"],
       "@/*": ["src/*"]
     },

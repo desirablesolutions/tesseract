@@ -1,23 +1,31 @@
+import path from 'path';
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
+
 
 export default defineConfig({
-  plugins: [react(), dts()],
+  plugins: [ dts(),  viteStaticCopy({
+    targets: [
+      {
+        src:  'src', 
+        dest: './', 
+      },
+    ],
+  })],
   build: {
+    outDir: 'dist',
     lib: {
       entry: 'src/index.ts',
-      name: 't4-utils-ts',
-      fileName: (format) => `index.${format}.js`
+      formats: ['es', 'cjs', 'umd'],
+      name: 't4-utils',
+      fileName: (format) => `index.${format}.js`,
     },
+ 
     rollupOptions: {
-      external: ['react', 'react-dom'],
-      output: {
-        globals: {
-          'react': 'React',
-          'react-dom': 'ReactDOM'
-        }
-      }
-    }
-  }
+    external: [/^src.*/, /^src*/],
+    },
+    sourcemap: true,
+  },
+
 });

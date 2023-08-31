@@ -1,6 +1,6 @@
 {
   "name": "t4-types",
-  "version": "1.0.1",
+  "version": "2.0.1",
   "description": "Our collection of semantic types & presets for user interfaces.",
   "main": "./dist/index.es.js",
   "scripts": {
