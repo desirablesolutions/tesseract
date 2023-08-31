@@ -6,8 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp --gulpfile build/gulp/index.mjs",
-    "generate:readme": "gulp readme --gulpfile build/gulp/index.mjs",
-    "g:readme": "npm run generate:readme"
+    "g:readme": "npx @appnest/readme generate --input=DOCUMENTATION.md --config=docs.config.json &&  copy README.md lib &&  copy README.md typings &&  copy README.md www"
   },
   "repository": {
     "type": "git",

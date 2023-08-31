@@ -1,34 +1,137 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- ⚠️ This README has been generated from the file(s) "DOCUMENTATION.md" ⚠️--><h1 align="center">Tesseract</h1>
+<h4 align="center">A generous, hyper-dimensional, framework-agnostic, parametric, UI-component library.</h4>
 
-## Getting Started
+<h4 align="center"><img src="https://github.com/desirablesolutions/tesseract/blob/main/docs/logo.png" height="260px" width="260px"></h4>
+<h2>Screenshots</h2>
+<h2>✨Features</h2>
 
-First, run the development server:
+* TailwindCSS-first class names.
+* Unique customization schema with style-focused proper-named templates.
+* Compile-time & run-time template literal parser for targeting any framework. (it's just STL & pure functions😆)
+* Clear and clean customizations.
+* Generic types & definition functors provided through [Blakprint](https://blakprint.pro)
+* Multiple packge types and sizes.
+* Multiple CDN access.
+<h2>Installation</h2>
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+npm i t4-[package]-[specific | agnosic] 
+```
+<h2>🌟Usage</h2>
+
+**typescript**
+
+1. **choose a package**
+
+```bash
+
+npm i t4-basic-ts
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**or**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **some components you need**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm i t4-navbar-ts t4-footer-ts t4-button-ts
+```
 
-## Learn More
+2. **import and configure your components.**
 
-To learn more about Next.js, take a look at the following resources:
+```javascript
+import { Navbar as T4NavBar } from "t4-navbar-ts";
+import { Footer as T4Footer } from "t4-footer-ts";
+import { Button as T4Button } from "t4-button-ts";
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+const themeSx: T4StylizerProps = {
+    bg: "black",
+    fg: "white",
+    text: themeSx.fg,
+    fx: {
+        glassmorphism: {
+            strength: "md"
+        }
+    },
+    on: {
+        hover: {
+            color: "white",
+            bg: "black",
+            duration: "0.5s",
+        },
+        click: {
+            outline: {
+                color: "white",
+                size: "2px",
+                duration: "0.5s ease-in-out"
+            }
+        }
+        }
+    }
+}
 
-## Deploy on Vercel
+export const NavBar = T4NavBar({ target: "react", template: "blake", sx: themeSx })
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+export const Button = T4Button({ target: "react", template: "blake", sx: themeSx })
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+export const Footer = T4Footer({ target: "react", template: "blake", sx: themeSx })
+
+
+export const Page = props => {
+
+    return (
+       <>
+        <NavBar {...props?.navBar}/>
+        <Button {...props?.buton}/>
+        <Footer {...props?.footer}/>
+       </>
+    )
+}
+```
+
+<h2>Technologies</h2>
+
+**dependencies**
+1. [htm](https://www.npmjs.com/package/htm)
+2. [vite]
+3. [framer-motion]
+4. [tailwindCSS]
+<h2>📦Packages</h2>
+
+**Platforms**
+
+1. **Framework Specific**
+   1. [React]
+   2. [Qwik]
+2. **Framework Agnostic**
+   1. T4-Intermidary Format --> Custom Parser Target.
+
+---
+
+**Options**
+
+1. core
+2. tiny
+3. full
+4. fancy
+
+---
+
+(load:docs/AUTHORS.md)
+(load:docs/ACKNOWLEDGEMENTS.md)
+(load:docs/ISSUES.md)
+<h2>⏳Changelog</h2>
+
+
+
+<h3>v2.0.0</h3>
+
+<h2>©️Copyright</h2>
+
+**©️ 2023 Désirable Solutions. All Rights Reserved.**
+
+<h2>📜License</h2>
+
+> This project is under the GPL-3.0-version license. ☂️
+
