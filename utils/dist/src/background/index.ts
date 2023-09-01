@@ -1,1 +1,2 @@
-export * from "./backgrounds"
+export * from "./background"
+export * from "./backgroundColor"

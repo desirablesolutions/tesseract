@@ -1708,12 +1708,9 @@ function screenReader({
   preset
 }) {
   return defineStylizer({
-    preset: TesseractScreenReaderPreset[preset]
+    preset: TesseractScreenReaderPreset[preset != null ? preset : "default"]
   });
 }
-screenReader({
-  preset: ""
-});
 function accessibility({
   screenReader: screenReader$1
 }) {
@@ -1721,5 +1718,67 @@ function accessibility({
     return `${screenReader(screenReader$1 == null ? void 0 : screenReader$1.preset).value()}`;
   });
 }
-export { TesseractAccessibilityPreset, TesseractScreenReaderPreset, accessibility, defineStylizer, screenReader, serializeClasses };
+const TesseractBackgroundColorPreset = {
+  default: {
+    base: () => "bg-transparent"
+  },
+  black: {
+    base: () => "bg-black"
+  },
+  white: {
+    base: () => "bg-white"
+  },
+  red: {
+    base: (overrides) => `bg-red-${(overrides == null ? void 0 : overrides.intensity) * 100}`
+  },
+  orange: {
+    base: (overrides) => `bg-red-${overrides.intensity * 100}`
+  },
+  yellow: {
+    base: (overrides) => `bg-yellow-${overrides.intensity * 100}`
+  },
+  green: {
+    base: (overrides) => `bg-green-${overrides.intensity * 100}`
+  },
+  blue: {
+    base: (overrides) => `bg-blue-${overrides.intensity * 100}`
+  },
+  indigo: {
+    base: (overrides) => `bg-indigo-${overrides.intensity * 100}`
+  },
+  violet: {
+    base: (overrides) => `bg-violet-${overrides.intensity * 100}`
+  },
+  gray: {
+    base: (overrides) => `bg-gray-${overrides.intensity * 100}`
+  }
+};
+function backgroundColor({
+  preset,
+  sx
+}) {
+  return defineStylizer({
+    preset: TesseractBackgroundColorPreset[preset],
+    overrides: sx
+  });
+}
+backgroundColor({
+  preset: "green",
+  sx: {
+    intensity: 9
+  }
+});
+function background(params) {
+  const backgroundsSxMap = {
+    backgroundColor
+  };
+  return ge(() => {
+    return Object.entries(backgroundsSxMap).map(([key, stylizer]) => {
+      return `${stylizer(
+        params[key]
+      ).value()}`;
+    }).join(" ");
+  });
+}
+export { TesseractAccessibilityPreset, TesseractScreenReaderPreset, accessibility, background, backgroundColor, defineStylizer, screenReader, serializeClasses };
 //# sourceMappingURL=index.es.js.map

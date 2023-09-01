@@ -1,9 +1,27 @@
 
 
-import { screenReader } from "t4-utils";
+import { screenReader, background, accessibility } from "t4-utils";
 
-const mySx = screenReader({}).value();
+const test3 = background({
+  backgroundColor: {}
+})
 
-export default function Home() {
-  return <>{mySx}</>;
+export default function Page() {
+  const test = screenReader({
+    preset: Date.now() % 2 === 0  ? "default" : undefined
+  }).value()
+  
+  const test2 = accessibility({
+    screenReader: {
+      preset: Date.now() %  2!== 0  ? "disabled" : "default"
+    }
+  }).value()
+
+
+  return (
+    <div>
+      {test}
+      {test2}
+    </div>
+  )
 }

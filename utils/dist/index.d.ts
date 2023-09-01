@@ -1,7 +1,10 @@
 export * from "./types";
 export * from "./utils";
 export * from "./accessibility";
-/**export * from "./background"
+export * from "./background";
+/**
+ *
+ *
 export * from "./borders"
 export * from "./effects"
 export * from "./filters"

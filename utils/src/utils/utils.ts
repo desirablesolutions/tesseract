@@ -1,6 +1,9 @@
 import { Definition, define, defineClassSerializer } from "blakprint";
 import type { PresetType } from "..";
 
+
+export const SPACE_CHARACTER: string = " " as const 
+
 export const serializeClasses = defineClassSerializer<
   string | string[],
   string,
@@ -28,4 +31,20 @@ export function defineStylizer<BaseParameters>({
   );
 
   return define<BaseParameters, string, Error>(template);
+}
+
+
+export function defineStyleSet(params: any): Definition {
+  
+  const result = define<any, string, any>(() => {
+    return Object.entries(params.sxMappings)
+      .map(([key, stylizer]) => {
+        return `${stylizer(
+          params[key as keyof typeof params.sxMappings]
+        ).value()}`;
+      })
+      .join(SPACE_CHARACTER);
+  });
+  
+  return  result
 }

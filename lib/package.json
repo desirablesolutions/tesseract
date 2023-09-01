@@ -1,5 +1,5 @@
 {
-  "name": "t4",
+  "name": "t4-ui",
   "version": "10.0.0",
   "description": "🟦A generous, hyper-dimensional, framework-agnostic, parametric, UI-component library.",
   "main": "index.js",

@@ -1,6 +1,5 @@
 (load:docs/TITLE.md)
 (load:docs/LOGO.md)
-(load:docs/SCREENSHOTS.md)
 (load:docs/FEATURES.md)
 (load:docs/INSTALLATION.md)
 (load:docs/USAGE.md)

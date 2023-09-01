@@ -1,4 +1,4 @@
-import { TesseractScreenReaderPresetType } from "..";
-export declare function screenReader({ preset, }: {
-    preset?: keyof TesseractScreenReaderPresetType;
+export type PresetTypeNames = "default";
+export declare function screenReader({ preset }: {
+    preset?: PresetTypeNames;
 }): import("blakprint").Definition<unknown, string, Error>;
