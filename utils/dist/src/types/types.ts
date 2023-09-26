@@ -5,8 +5,9 @@ export type BASE_PRESET_TYPE<TypeParams=any> = {
   sm?: EffectorType<TypeParams, string>
   md?: EffectorType<TypeParams, string>
   lg?: EffectorType<TypeParams, string>
-  xl?: EffectorType<TypeParams, string>
-  dark?: EffectorType<TypeParams, string>
+  xl?: EffectorType<TypeParams, string>,
+  dark?: EffectorType<TypeParams, string>,
+  key? : TypeParams,
   on?: Partial<{
     hover: EffectorType<TypeParams, string>
     click: EffectorType<TypeParams, string>

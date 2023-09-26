@@ -1,22 +1,15 @@
-import { defineStylizer, TesseractScreenReaderPresetType } from "..";
+import { PresetType, defineStylizer } from "..";
 import { TesseractScreenReaderPreset } from "./presets";
 
+export type ScreenReaderProps = {
+  preset: keyof typeof TesseractScreenReaderPreset;
+  sx?: any;
+};
 
-
-export type PresetTypeNames = "default"
-
-export function screenReader({
-  preset
-}: {
-  preset?:PresetTypeNames
-}) {
-  return defineStylizer({
-    preset:
-      TesseractScreenReaderPreset[
-        preset as keyof typeof TesseractScreenReaderPreset ?? "default"
-      ],
+export function screenReader({ preset, sx }: ScreenReaderProps) {
+  const presetLoad: PresetType = TesseractScreenReaderPreset as PresetType;
+  return defineStylizer<any>({
+    preset: presetLoad[preset as keyof typeof presetLoad],
+    overrides: sx,
   });
 }
-
-
-

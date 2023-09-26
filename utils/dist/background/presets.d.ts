@@ -1,5 +1,5 @@
 import type { PresetType } from "..";
-export type TesseractBackgroundColorBaseParameters = Parameters<(params?: {
+export type TesseractBackgroundColorBaseParameters = Parameters<(params: {
     intensity: number;
 }) => string>[0];
 export declare const TesseractBackgroundColorPreset: PresetType<TesseractBackgroundColorBaseParameters>;
@@ -9,10 +9,10 @@ export declare const TesseractBackgroundPreset: {
     readonly backgroundColor: {
         [identifier: string]: import("..").BASE_PRESET_TYPE<{
             intensity: number;
-        } | undefined>;
+        }>;
         [identifier: symbol]: import("..").BASE_PRESET_TYPE<{
             intensity: number;
-        } | undefined>;
+        }>;
         default: import("..").BASE_PRESET_TYPE<any>;
     };
     readonly backgroundOpacity: {

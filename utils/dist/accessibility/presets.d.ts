@@ -1,11 +1,24 @@
-import type { PresetType } from "..";
-export declare const TesseractScreenReaderPreset: PresetType;
-export declare const TesseractAccessibilityPreset: {
-    readonly screenReader: {
-        [identifier: string]: import("..").BASE_PRESET_TYPE<any>;
-        [identifier: symbol]: import("..").BASE_PRESET_TYPE<any>;
-        default: import("..").BASE_PRESET_TYPE<any>;
+export declare const TesseractScreenReaderPreset: {
+    readonly default: {
+        readonly base: () => string;
+    };
+    readonly disabled: {
+        readonly base: () => string;
+    };
+    readonly custom: {
+        readonly base: (overrides: any) => string;
     };
 };
-export type TesseractScreenReaderPresetType = typeof TesseractScreenReaderPreset;
-export type TesseractAccessibilityPresetsType = Record<keyof typeof TesseractAccessibilityPreset, typeof TesseractAccessibilityPreset>;
+export declare const TesseractAccessibilityPreset: {
+    readonly screenReader: {
+        readonly default: {
+            readonly base: () => string;
+        };
+        readonly disabled: {
+            readonly base: () => string;
+        };
+        readonly custom: {
+            readonly base: (overrides: any) => string;
+        };
+    };
+};

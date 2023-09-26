@@ -1,18 +1,15 @@
-import { Definition, define } from "blakprint";
-import { TesseractAccessibilityPreset } from "./presets";
-import { screenReader as ScreenReader } from "./screenReader";
+import { TesseractAccessibilityPreset, TesseractAccessibilityPresetType, defineStyleSet } from "..";
 
 
-export function accessibility({
-  screenReader,
-}: {
-  screenReader?: Record<keyof typeof TesseractAccessibilityPreset["screenReader"], any>;
-}): Definition {
 
-  
-  return define(() => {
-    return `${ScreenReader(screenReader?.preset).value()}`
+export type AccessibilityProps = Record<keyof TesseractAccessibilityPresetType, any>
+
+export function accessibility(
+  props?: AccessibilityProps
+) {
+  return defineStyleSet({
+    preset: TesseractAccessibilityPreset,
+    parameters: props,
   });
 }
-
 

@@ -1,10 +1,10 @@
 import type { PresetType } from "..";
 
 export type TesseractBackgroundColorBaseParameters = Parameters<
-  (params?: { intensity: number }) => string
+  (params: { intensity: number }) => string
 >[0];
 
-export const TesseractBackgroundColorPreset: PresetType<TesseractBackgroundColorBaseParameters> =
+export const TesseractBackgroundColorPreset =
   {
     default: {
       base: () => "bg-transparent",
@@ -16,7 +16,7 @@ export const TesseractBackgroundColorPreset: PresetType<TesseractBackgroundColor
       base: () => "bg-white",
     },
     red: {
-      base: (overrides: any) => `bg-red-${overrides?.intensity * 100}`,
+      base: (overrides: TesseractBackgroundColorBaseParameters) => `bg-red-${overrides.intensity * 100}`,
     },
     orange: {
       base: (overrides: any) => `bg-red-${overrides.intensity * 100}`,
@@ -39,6 +39,9 @@ export const TesseractBackgroundColorPreset: PresetType<TesseractBackgroundColor
     gray: {
       base: (overrides: any) => `bg-gray-${overrides.intensity * 100}`,
     },
+    custom: {
+      base: ({ colorCode }: { colorCode: string})=> `bg-[${colorCode}]`
+    }
   };
 
 export const TesseractBackgroundOpacityPreset: PresetType = {
@@ -48,19 +51,15 @@ export const TesseractBackgroundOpacityPreset: PresetType = {
   },
 } as const;
 
-export const backgroundAttachment: PresetType = {
-  default: {
-    base: (opacity?: number): string =>
-      !opacity ? "bg-opacity-100" : `bg-opacity-${Math.floor(opacity * 100)}`,
-  },
-  fixed: {
-    base: () => `bg-fixed`,
-  },
-};
+
 
 export const TesseractBackgroundPreset = {
   backgroundColor: TesseractBackgroundColorPreset,
   backgroundOpacity: TesseractBackgroundOpacityPreset,
+  backgroundPosition: null,
+  backgroundClip: null,
+  backgroundAttachment: null,
+  gradientColorStops: null,
 } as const;
 
 export type TesseractBackgroundPresetType = Record<

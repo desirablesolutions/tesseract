@@ -21,9 +21,13 @@ export function backgroundColor({
 }
 
 
-const myGreen = backgroundColor({
-  preset: "green",
-  sx:{
-    intensity: 9
+const myGreen = backgroundColor(base: {
+
+},
+  sm: {
+    preset: "blue",
+    sx: {
+      intensity: 7
+    }
   }
 })

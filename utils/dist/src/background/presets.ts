@@ -1,7 +1,7 @@
 import type { PresetType } from "..";
 
 export type TesseractBackgroundColorBaseParameters = Parameters<
-  (params?: { intensity: number }) => string
+  (params: { intensity: number }) => string
 >[0];
 
 export const TesseractBackgroundColorPreset: PresetType<TesseractBackgroundColorBaseParameters> =
@@ -16,7 +16,7 @@ export const TesseractBackgroundColorPreset: PresetType<TesseractBackgroundColor
       base: () => "bg-white",
     },
     red: {
-      base: (overrides: any) => `bg-red-${overrides?.intensity * 100}`,
+      base: (overrides: TesseractBackgroundColorBaseParameters) => `bg-red-${overrides.intensity * 100}`,
     },
     orange: {
       base: (overrides: any) => `bg-red-${overrides.intensity * 100}`,

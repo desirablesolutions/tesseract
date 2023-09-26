@@ -1679,6 +1679,7 @@ ks({
     }
   }
 });
+const SPACE_CHARACTER = " ";
 const serializeClasses = zs();
 function defineStylizer({
   preset,
@@ -1686,12 +1687,26 @@ function defineStylizer({
 }) {
   const BASE = "base";
   const VOID_STRING = "";
-  const template = serializeClasses.value(
+  const result = serializeClasses.value(
     Object.entries(preset).map(([directive, stylizer]) => {
-      return `${directive == BASE ? VOID_STRING : `${directive}:`}${stylizer(overrides)}`;
+      return `${directive == BASE ? VOID_STRING : `${directive}:`}${stylizer(
+        overrides
+      )}`;
     })
   );
-  return ge(template);
+  return ge(result);
+}
+function defineStyleSet(params) {
+  const result = ge(() => {
+    return serializeClasses.value(
+      Object.entries(params.sxMappings).map(([key, stylizer]) => {
+        return `${stylizer(
+          params[key]
+        ).value()}`;
+      })
+    );
+  });
+  return result;
 }
 const TesseractScreenReaderPreset = {
   default: {
@@ -1699,23 +1714,26 @@ const TesseractScreenReaderPreset = {
   },
   disabled: {
     base: () => "not-sr-only"
+  },
+  custom: {
+    base: (overrides) => `${overrides.className}`
   }
 };
 const TesseractAccessibilityPreset = {
   screenReader: TesseractScreenReaderPreset
 };
-function screenReader({
-  preset
+function accessibility({
+  screenReader: screenReader2
 }) {
-  return defineStylizer({
-    preset: TesseractScreenReaderPreset[preset != null ? preset : "default"]
+  return defineStyleSet({
+    ...TesseractAccessibilityPreset
   });
 }
-function accessibility({
-  screenReader: screenReader$1
-}) {
-  return ge(() => {
-    return `${screenReader(screenReader$1 == null ? void 0 : screenReader$1.preset).value()}`;
+function screenReader({ preset, sx }) {
+  const presetLoad = TesseractScreenReaderPreset;
+  return defineStylizer({
+    preset: presetLoad[preset],
+    overrides: sx
   });
 }
 const TesseractBackgroundColorPreset = {
@@ -1729,7 +1747,7 @@ const TesseractBackgroundColorPreset = {
     base: () => "bg-white"
   },
   red: {
-    base: (overrides) => `bg-red-${(overrides == null ? void 0 : overrides.intensity) * 100}`
+    base: (overrides) => `bg-red-${overrides.intensity * 100}`
   },
   orange: {
     base: (overrides) => `bg-red-${overrides.intensity * 100}`
@@ -1780,5 +1798,5 @@ function background(params) {
     }).join(" ");
   });
 }
-export { TesseractAccessibilityPreset, TesseractScreenReaderPreset, accessibility, background, backgroundColor, defineStylizer, screenReader, serializeClasses };
+export { SPACE_CHARACTER, TesseractAccessibilityPreset, TesseractScreenReaderPreset, accessibility, background, backgroundColor, defineStyleSet, defineStylizer, screenReader, serializeClasses };
 //# sourceMappingURL=index.es.js.map

@@ -1,15 +1,15 @@
-import { default as Burger } from "./Burger";
-import { default as CallToAction } from "./CallToAction";
-import { default as Container } from "./Container";
-import { default as Favicon } from "./Favicon";
-import { default as LeftLinks } from "./LeftLinks";
-import { default as RightLinks } from "./RightLinks";
+import { default as Burger } from "../parametric/Burger";
+import { default as CallToAction } from "../parametric/CallToAction";
+import { default as Container } from "../parametric/Container";
+import { default as Favicon } from "../parametric/Favicon";
+import { default as LeftLinks } from "../parametric/LeftLinks";
+import { default as RightLinks } from "../parametric/RightLinks";
 import * as React from "react"
 import { defineVariadicComponent } from "blakprint"
 import { stylizer as sx } from "t4"
 
 
-export default function defineNavBar(preset,sx) {
+export default function defineVariadicNavBar(preset,sx) {
 
   return defineVariadicComponent({
     views: {
