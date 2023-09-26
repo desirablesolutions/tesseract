@@ -15,7 +15,237 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <section>
+          <div className="container px-4 mx-auto bg-black">
+            <div className="flex items-center justify-between py-5 lg:py-8">
+              <div className="w-auto">
+                <div className="flex flex-wrap items-center">
+                  <div className="w-auto">
+                    <a className="relative z-10 inline-block" href="#">
+                      <img 
+                      className='h-14'
+                      src="https://publish-01.obsidian.md/access/72f64ee84c91516a6793312af11bb9c9/Meta/Media/tesseract/tesseract-logo.png?ts=1695783600000&sig=bb153b3cc0992c1427e3496692561dc15c33f3bb3e33cf48d0e622fe0a92485c" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="w-auto">
+                <div className="flex flex-wrap items-center">
+                  <div className="hidden w-auto lg:block">
+                    <ul className="flex items-center mr-12">
+                      <li className="mr-12 font-medium tracking-tighter text-white hover:text-opacity-90">
+                        <a href="#">Home</a>
+                      </li>
+                      <li className="mr-12 font-medium tracking-tighter text-white hover:text-opacity-90">
+                        <a href="#">About us</a>
+                      </li>
+                      <li className="mr-12 font-medium tracking-tighter text-white hover:text-opacity-90">
+                        <a href="#">Wallet</a>
+                      </li>
+                      <li className="font-medium tracking-tighter text-white hover:text-opacity-90">
+                        <a href="#">Blog</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="w-auto lg:hidden">
+                    <a className="relative z-10 inline-block" href="#">
+                      <svg
+                        className="text-green-500 navbar-burger"
+                        width={51}
+                        height={51}
+                        viewBox="0 0 56 56"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect width={56} height={56} rx={28} fill="currentColor" />
+                        <path
+                          d="M37 32H19M37 24H19"
+                          stroke="black"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="hidden w-auto p-2 lg:block">
+                <a href="#">
+                  <svg
+                    className="navbar-burger"
+                    width={18}
+                    height={17}
+                    viewBox="0 0 18 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width={5} height={5} rx="2.5" fill="white" />
+                    <rect x={13} width={5} height={5} rx="2.5" fill="white" />
+                    <rect x={13} y={12} width={5} height={5} rx="2.5" fill="white" />
+                    <rect y={12} width={5} height={5} rx="2.5" fill="white" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="fixed top-0 bottom-0 left-0 z-50 hidden w-4/6 navbar-menu sm:max-w-xs">
+            <div className="fixed inset-0 bg-black navbar-backdrop opacity-80" />
+            <nav className="relative z-10 h-full pt-8 overflow-y-auto bg-black px-9">
+              <div className="flex flex-wrap justify-between h-full">
+                <div className="w-full">
+                  <div className="flex items-center justify-between -m-2">
+                    <div className="w-auto p-2">
+                      <a className="inline-block" href="#">
+                        <img src="nightsable-assets/logos/logo.svg" alt="" />
+                      </a>
+                    </div>
+                    <div className="w-auto p-2">
+                      <a className="inline-block text-white navbar-burger" href="#">
+                        <svg
+                          width={24}
+                          height={24}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M6 18L18 6M6 6L18 18"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center w-full py-16">
+                  <ul>
+                    <li className="mb-8 font-medium tracking-tighter text-white hover:text-opacity-90">
+                      <a href="#">Home</a>
+                    </li>
+                    <li className="mb-8 font-medium tracking-tighter text-white hover:text-opacity-90">
+                      <a href="#">About us</a>
+                    </li>
+                    <li className="mb-8 font-medium tracking-tighter text-white hover:text-opacity-90">
+                      <a href="#">Wallet</a>
+                    </li>
+                    <li className="font-medium tracking-tighter text-white hover:text-opacity-90">
+                      <a href="#">Blog</a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex flex-col justify-end w-full pb-8">
+                  <a
+                    className="inline-block px-8 py-4 tracking-tighter text-center text-white transition duration-300 border-2 border-white rounded-full hover:text-black hover:bg-green-400 focus:border-green-400 focus:border-opacity-40 hover:border-green-400 focus:ring-4 focus:ring-green-400 focus:ring-opacity-40"
+                    href="#"
+                  >
+                    Get in touch
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </section>
+  
+        {children}
+        <section className="py-16 overflow-hidden">
+  <div className="container px-4 mx-auto">
+    <div className="flex flex-wrap items-center justify-between -m-8">
+      <div className="w-auto p-8">
+        <img src="nightsable-assets/logos/logo.svg" alt="" />
+      </div>
+      <div className="w-auto p-8">
+        <ul className="flex flex-wrap -m-5">
+          <li className="p-5">
+            <a
+              className="inline-block text-lg font-medium text-gray-300 transition duration-300 hover:text-white"
+              href="#"
+            >
+              Contact
+            </a>
+          </li>
+          <li className="p-5">
+            <a
+              className="inline-block text-lg font-medium text-gray-300 transition duration-300 hover:text-white"
+              href="#"
+            >
+              Blog
+            </a>
+          </li>
+          <li className="p-5">
+            <a
+              className="inline-block text-lg font-medium text-gray-300 transition duration-300 hover:text-white"
+              href="#"
+            >
+              Our Story
+            </a>
+          </li>
+          <li className="p-5">
+            <a
+              className="inline-block text-lg font-medium text-gray-300 transition duration-300 hover:text-white"
+              href="#"
+            >
+              Careers
+            </a>
+          </li>
+          <li className="p-5">
+            <a
+              className="inline-block text-lg font-medium text-gray-300 transition duration-300 hover:text-white"
+              href="#"
+            >
+              Privacy
+            </a>
+          </li>
+          <li className="p-5">
+            <a
+              className="inline-block text-lg font-medium text-gray-300 transition duration-300 hover:text-white"
+              href="#"
+            >
+              Terms
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="w-auto p-8">
+        <div className="relative overflow-hidden border border-gray-900 focus-within:border-white rounded-3xl">
+          <select
+            className="w-full py-4 pl-6 pr-16 text-gray-300 bg-transparent outline-none appearance-none placeholder-gray-50"
+            type="text"
+            placeholder="Company"
+          >
+            <option hidden="">English</option>
+            <option>Poland</option>
+            <option>Norway</option>
+            <option>France</option>
+          </select>
+          <svg
+            className="absolute transform -translate-y-1/2 right-8 top-1/2"
+            width={16}
+            height={9}
+            viewBox="0 0 16 9"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.6004 1.4585L9.16706 6.89183C8.52539 7.5335 7.47539 7.5335 6.83372 6.89183L1.40039 1.4585"
+              stroke="white"
+              strokeWidth="1.66667"
+              strokeMiterlimit={10}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      </body>
     </html>
   )
 }
