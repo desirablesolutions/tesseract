@@ -1,13 +1,14 @@
 <h2>🌟Usage</h2>
 
-**just import & define component parameters.**
+[**📖Documentation**](https://www.desirable.solutions/data/Projects/Tesseract/Tesseract)
+
+
+**import & define component parameters.**
 
 ```ts
-import { defineNavBar } from "t4-ui"
+import { defineVariadicNavBar } from "t4-ui"
 
-export type NavBarProps = {
-    type: "variadic" | "parametric"
-}
+const NavBar = defineVariadicNavBar({ preset: "angela" })
 
-export const NavBar = defineNavBar({type: "variadic"})
+export const Page = () = (<NavBar/>)
 ```
