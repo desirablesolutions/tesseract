@@ -230,11 +230,11 @@ export default function SearchResults() {
                   everything
                 </p>
                 <p className="mb-4 text-white">
-                  I'm not very knowledgeable about finances, but I try to stay on
+                  Im not very knowledgeable about finances, but I try to stay on
                   top of my expenses and take advice from experts."
                 </p>
                 <p className="mb-4 text-white">
-                  I don't like thinking about finances, but I know I have to take
+                  I dont like thinking about finances, but I know I have to take
                   care of them. I try to take care of my savings and control my
                   expenses.
                 </p>
@@ -508,7 +508,7 @@ export default function SearchResults() {
                   </div>
                 </div>
                 <p className="mb-4 text-white">
-                  I'm interested in new technologies in the field of finance, such
+                  Im interested in new technologies in the field of finance, such
                   as blockchain or robo-advisors. I believe these new tools can
                   help manage money more efficiently.
                 </p>
@@ -580,7 +580,7 @@ export default function SearchResults() {
                   </div>
                 </div>
                 <p className="mb-4 text-white">
-                  I'm convinced that investing in education and acquiring new
+                  Im convinced that investing in education and acquiring new
                   skills is a key factor in building a stable financial future.
                 </p>
                 <p className="mb-4 text-white">
@@ -650,7 +650,7 @@ export default function SearchResults() {
                   </div>
                 </div>
                 <p className="mb-4 text-white">
-                  I'm convinced that investing in education and acquiring new
+                  Im convinced that investing in education and acquiring new
                   skills is a key factor in building a stable financial future.
                 </p>
                 <p className="mb-4 text-white">
