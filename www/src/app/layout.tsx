@@ -214,10 +214,9 @@ export default function RootLayout({
         <div className="relative overflow-hidden border border-gray-900 focus-within:border-white rounded-3xl">
           <select
             className="w-full py-4 pl-6 pr-16 text-gray-300 bg-transparent outline-none appearance-none placeholder-gray-50"
-            type="text"
             placeholder="Company"
           >
-            <option hidden="">English</option>
+            <option hidden={false}>English</option>
             <option>Poland</option>
             <option>Norway</option>
             <option>France</option>
