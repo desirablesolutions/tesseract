@@ -1,6 +1,5 @@
 <h2>✨Features</h2>
 
-* complete stylizer module for generating valid utility classSets. 
-* Parametric module
-* Variadic module
+<h3>Variadic Module</h3>
 
+<h3>Parametric Module</h3>

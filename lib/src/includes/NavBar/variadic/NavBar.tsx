@@ -1,5 +1,5 @@
 
-import { defineVariadicComponent } from "blakprint"
+import {defineVariadicComponent  } from "blakprint"
 
 
 export default function defineVariadicNavBar() {
