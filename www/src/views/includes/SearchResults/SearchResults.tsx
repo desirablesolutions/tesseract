@@ -231,7 +231,7 @@ export default function SearchResults() {
                 </p>
                 <p className="mb-4 text-white">
                   Im not very knowledgeable about finances, but I try to stay on
-                  top of my expenses and take advice from experts."
+                  top of my expenses and take advice from experts
                 </p>
                 <p className="mb-4 text-white">
                   I dont like thinking about finances, but I know I have to take

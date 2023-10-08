@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export default function SideMenu() { 
     return (
         <div className="fixed top-0 bottom-0 left-0 z-50 hidden w-4/6 navbar-menu sm:max-w-xs">
