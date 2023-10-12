@@ -1,11 +1,11 @@
 import "./globals.css"
 
-import { Inter } from "next/font/google"
+import { Space_Mono } from "next/font/google"
 import Footer from "@includes/Footer"
 import NavBar from "@includes/NavBar"
 
 
-const inter = Inter({ subsets: ["latin"] })
+const ApplicationFontFamily = Space_Mono({ subsets: ["latin"], weight: "400" })
 
 export const metadata = {
   title: "Tesseract UI",
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={ApplicationFontFamily.className}>
         <NavBar />
         {children}
         <Footer />

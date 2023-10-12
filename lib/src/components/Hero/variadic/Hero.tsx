@@ -1,3 +1,6 @@
+import { defineVariadicComponent } from "blakprint";
+
+
 export default function defineVariadicHeroComponent(props: any) {
     const { title } = props;
     const Title = () => {

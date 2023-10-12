@@ -10,7 +10,7 @@ export default function Footer() {
               <ul className="flex flex-wrap -m-5">
                 <li className="p-5">
                   <a
-                    className="inline-block text-lg font-medium text-gray-300 transition duration-300 hover:text-white"
+                    className="inline-block text-lg font-medium text-black transition duration-300 hover:text-white"
                     href="#"
                   >
                     Contact
@@ -18,7 +18,7 @@ export default function Footer() {
                 </li>
                 <li className="p-5">
                   <a
-                    className="inline-block text-lg font-medium text-gray-300 transition duration-300 hover:text-white"
+                    className="inline-block text-lg font-medium text-black transition duration-300 hover:text-white"
                     href="#"
                   >
                     Blog
@@ -26,7 +26,7 @@ export default function Footer() {
                 </li>
                 <li className="p-5">
                   <a
-                    className="inline-block text-lg font-medium text-gray-300 transition duration-300 hover:text-white"
+                    className="inline-block text-lg font-medium text-black transition duration-300 hover:text-white"
                     href="#"
                   >
                     Our Story
@@ -34,7 +34,7 @@ export default function Footer() {
                 </li>
                 <li className="p-5">
                   <a
-                    className="inline-block text-lg font-medium text-gray-300 transition duration-300 hover:text-white"
+                    className="inline-block text-lg font-medium text-black transition duration-300 hover:text-white"
                     href="#"
                   >
                     Careers
@@ -42,7 +42,7 @@ export default function Footer() {
                 </li>
                 <li className="p-5">
                   <a
-                    className="inline-block text-lg font-medium text-gray-300 transition duration-300 hover:text-white"
+                    className="inline-block text-lg font-medium text-black transition duration-300 hover:text-white"
                     href="#"
                   >
                     Privacy
@@ -50,7 +50,7 @@ export default function Footer() {
                 </li>
                 <li className="p-5">
                   <a
-                    className="inline-block text-lg font-medium text-gray-300 transition duration-300 hover:text-white"
+                    className="inline-block text-lg font-medium text-black transition duration-300 hover:text-white"
                     href="#"
                   >
                     Terms
@@ -61,7 +61,7 @@ export default function Footer() {
             <div className="w-auto p-8">
               <div className="relative overflow-hidden border border-gray-900 focus-within:border-white rounded-3xl">
                 <select
-                  className="w-full py-4 pl-6 pr-16 text-gray-300 bg-transparent outline-none appearance-none placeholder-gray-50"
+                  className="w-full py-4 pl-6 pr-16 text-black bg-transparent outline-none appearance-none placeholder-gray-50"
                   placeholder="Company"
                 >
                   <option hidden={false}>English</option>
