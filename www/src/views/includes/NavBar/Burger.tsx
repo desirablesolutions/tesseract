@@ -1,6 +1,6 @@
 export default function NavBarBurger({ burger }: { burger?: any }) {
     return (
-        <div className="hidden w-auto p-2 lg:block">
+        <div className="group hidden w-auto p-2 lg:block">
 
             <div className="w-auto">
                 <div className="flex flex-wrap items-center">
@@ -28,7 +28,7 @@ export default function NavBarBurger({ burger }: { burger?: any }) {
                     </div>
                 </div>
             </div>
-            <a href={""}>
+            <a className="hover:rotate-180 delay-150 ease-in-out will-change-auto" href={""}>
                 <svg
                     className="navbar-burger"
                     width={18}

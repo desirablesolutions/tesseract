@@ -2,7 +2,7 @@ export default function SearchInput() {
   return (
 <div className=" flex w-full justify-center px-6">
  
-  <div className="relative flex items-center justify-center w-full max-w-lg gap-2 px-2 divide-x shadow-md divide-white min-h-12 bg-black bg-opacity-90 hover:bg-opacity-100 rounded-2xl shadow-black z-10">
+  <div className="relative flex items-center justify-center w-full max-w-lg gap-2 px-2 divide-x shadow-md divide-white min-h-12 bg-black bg-opacity-80 hover:bg-opacity-100 rounded-3xl shadow-black z-10">
   
     <div className="flex items-center self-end flex-1 min-w-0">
       <form className="w-full h-full [&_textarea]:pr-11">
@@ -25,7 +25,7 @@ export default function SearchInput() {
               className="flex-[1_0_50%] min-w-[50%] disabled:opacity-80 text-white bg-transparent border-0 shadow-none resize-none outline-none ring-0 disabled:bg-transparent selection:bg-teal-300 selection:text-black placeholder:text-zinc-400 [scroll-padding-block:0.75rem] pl-3 py-3 sm:min-h-[15px] sm:leading-6 text-base md:text-sm"
               spellCheck="true"
               rows={1}
-              placeholder="Search me "
+              placeholder="a minimalistic hero section..."
               defaultValue={""}
             />
           </div>

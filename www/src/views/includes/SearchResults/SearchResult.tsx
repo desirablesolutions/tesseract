@@ -1,7 +1,7 @@
 export default function SearchResult(props: any) {
     return (
         <div className="w-full p-3">
-        <div className="px-6 py-8 border black shadow-md shadow-black cursor-pointer hover:shadow-2xl ease-in-out delay-75 rounded-xl">
+        <div className="px-6 py-8 border black shadow-black cursor-pointer shadow-2xl ease-in-out delay-75 rounded-2xl">
           <div className="flex flex-wrap items-center mb-3 -m-3">
             <div className="w-auto p-3">
               <img

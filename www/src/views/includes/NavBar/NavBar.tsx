@@ -1,15 +1,22 @@
+"use client";
+
 import NavBarBurger from "./Burger";
 import NavBarContainer from "./Container";
 import NavBarFavicon from "./Favicon";
 
-
+import ScrambleTexts from "@twistezo/react-text-scramble"
 export default function NavBar() {
   return (
     <NavBarContainer>
       <NavBarFavicon />
       <div className="w-auto">
+
+        <ScrambleTexts letterSpeed={100}
+          nextLetterSpeed={50}
+          pauseTime={9000}
+           texts={["Tesseract UI", `A generous, hyper-dimensional, framework-agnostic, parametric, UI-component library.`] as string[]} />
         <div className="flex flex-wrap items-center">
-        
+
           <div className="w-auto lg:hidden">
             <a className="relative z-10 inline-block" href="#">
               <svg
@@ -33,7 +40,7 @@ export default function NavBar() {
           </div>
         </div>
       </div>
-     <NavBarBurger/>
+      <NavBarBurger />
 
     </NavBarContainer>
   )
