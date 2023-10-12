@@ -40,7 +40,6 @@ export default function SearchInput() {
           </div>
           <button
             type="submit"
-            disabled=""
             id="send-button"
             className="flex items-center outline-none transition-colors focus-visible:ring-gs=gray-400 focus-visible:ring-1 bg-gs-gray-700 text-gs-background-1000 justify-center w-8 h-8 rounded-full shrink-0 hover:bg-gs-gray-600 disabled:opacity-50 disabled:hover:bg-gs-gray-700"
           >
