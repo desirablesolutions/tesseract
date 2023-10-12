@@ -2,16 +2,8 @@ export default function SearchInput() {
   return (
 <div className=" flex w-full justify-center px-6">
  
-  <div className="relative flex items-center justify-center w-full max-w-lg gap-2 px-2 divide-x shadow-lg divide-white min-h-12 bg-black rounded-xl shadow-black z-10">
-    <div className="flex items-center justify-center rounded-l-full">
-      <img
-        alt="Avatar"
-        width={32}
-        height={32}
-        className="relative flex rounded-full shrink-0"
-        src="https://vercel.com/api/www/avatar/xLbb2gZ5WR6eFn77T3MKngv5?s=64"
-      />
-    </div>
+  <div className="relative flex items-center justify-center w-full max-w-lg gap-2 px-2 divide-x shadow-md divide-white min-h-12 bg-black bg-opacity-90 hover:bg-opacity-100 rounded-2xl shadow-black z-10">
+  
     <div className="flex items-center self-end flex-1 min-w-0">
       <form className="w-full h-full [&_textarea]:pr-11">
         <div
@@ -44,19 +36,44 @@ export default function SearchInput() {
           >
             <span className="sr-only">Send</span>
             <svg
-              width={16}
-              height={16}
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M13.5 3V2.25H15V3V10C15 10.5523 14.5522 11 14 11H3.56062L5.53029 12.9697L6.06062 13.5L4.99996 14.5607L4.46963 14.0303L1.39641 10.9571C1.00588 10.5666 1.00588 9.93342 1.39641 9.54289L4.46963 6.46967L4.99996 5.93934L6.06062 7L5.53029 7.53033L3.56062 9.5H13.5V3Z"
-                fill="currentColor"
-              />
-            </svg>
+  fill="#FFFFFF"
+  version="1.1"
+  id="Layer_1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlnsXlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 511.986 511.986"
+  xmlSpace="preserve"
+  width="150px"
+  height="150px"
+>
+  <g id="SVGRepo_bgCarrier" strokeWidth={0} />
+  <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
+  <g id="SVGRepo_iconCarrier">
+    {" "}
+    <g>
+      {" "}
+      <g>
+        {" "}
+        <path d="M209.297,5.229C93.887,5.229,0,99.121,0,214.526C0,329.93,93.887,423.822,209.297,423.822 c115.409,0,209.297-93.892,209.297-209.297C418.593,99.121,324.706,5.229,209.297,5.229z M209.297,402.893 c-103.862,0-188.367-84.5-188.367-188.367c0-103.866,84.505-188.367,188.367-188.367c103.861,0,188.367,84.501,188.367,188.367 C397.664,318.392,313.158,402.893,209.297,402.893z" />{" "}
+      </g>{" "}
+    </g>{" "}
+    <g>
+      {" "}
+      <g>
+        {" "}
+        <rect
+          x="431.726"
+          y="348.717"
+          transform="matrix(0.7071 -0.7071 0.7071 0.7071 -179.4635 440.6595)"
+          width="20.927"
+          height="176.488"
+        />{" "}
+      </g>{" "}
+    </g>{" "}
+  </g>
+</svg>
+
+
           </button>
         </div>
       </form>

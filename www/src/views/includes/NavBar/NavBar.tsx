@@ -8,26 +8,11 @@ export default function NavBar() {
       <NavBarFavicon />
       <div className="w-auto">
         <div className="flex flex-wrap items-center">
-          <div className="hidden w-auto lg:block">
-            <ul className="flex items-center mr-12 text-black">
-              <li className="mr-12 font-medium tracking-tighter  hover:text-opacity-90">
-                <a href="#">Home</a>
-              </li>
-              <li className="mr-12 font-medium tracking-tighter  hover:text-opacity-90">
-                <a href="#">About us</a>
-              </li>
-              <li className="mr-12 font-medium tracking-tighter  hover:text-opacity-90">
-                <a href="#">Wallet</a>
-              </li>
-              <li className="font-medium tracking-tighter  hover:text-opacity-90">
-                <a href="#">Blog</a>
-              </li>
-            </ul>
-          </div>
+        
           <div className="w-auto lg:hidden">
             <a className="relative z-10 inline-block" href="#">
               <svg
-                className="text-green-500 navbar-burger"
+                className="text-blue-500 navbar-burger"
                 width={51}
                 height={51}
                 viewBox="0 0 56 56"
@@ -57,10 +42,10 @@ export default function NavBar() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <rect width={5} height={5} rx="2.5" fill="white" />
-            <rect x={13} width={5} height={5} rx="2.5" fill="white" />
-            <rect x={13} y={12} width={5} height={5} rx="2.5" fill="white" />
-            <rect y={12} width={5} height={5} rx="2.5" fill="white" />
+            <rect width={5} height={5} rx="2.5" fill="black" />
+            <rect x={13} width={5} height={5} rx="2.5" fill="black" />
+            <rect x={13} y={12} width={5} height={5} rx="2.5" fill="black" />
+            <rect y={12} width={5} height={5} rx="2.5" fill="black" />
           </svg>
         </a>
       </div>
