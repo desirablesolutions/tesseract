@@ -57,6 +57,7 @@ export  function defineVariadicComponent<
 const TesteMe = defineVariadicComponent({
   views: {
     default: {
+      renderer: {},
       container: ({ children, sx }: any) => <div className={`${sx.container.base}`}>{children}</div>,
       component: ({ props, sx }: any) => {
         return <>

@@ -1,62 +1,41 @@
-<!-- ⚠️ This README has been generated from the file(s) "DOCUMENTATION.md" ⚠️--><h1 align="center">Tesseract</h1>
-<h4 align="center">A generous, hyper-dimensional, framework-agnostic, parametric, UI-component library.</h4>
+# Website
 
-<h4 align="center"><img src="https://github.com/desirablesolutions/tesseract/blob/main/docs/logo.png" height="260px" width="260px"></h4>
-<h2>✨Features</h2>
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-<h3>Variadic Module</h3>
+### Installation
 
-<h3>Parametric Module</h3>
-
-<h2>🔨Installation</h2>
-
-```bash
-npm i t4-ui@latest
+```
+$ yarn
 ```
 
-*Just need utils & types?*
+### Local Development
 
-```bash
-npm i t4-utils@latest 
-npm i t4-types@latest
+```
+$ yarn start
 ```
 
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-<h2>🌟Usage</h2>
+### Build
 
-[**📖Documentation**](https://www.desirable.solutions/data/Projects/Tesseract/Tesseract)
-
-
-**import & define component parameters.**
-
-```ts
-import { defineVariadicNavBar } from "t4-ui"
-
-const NavBar = defineVariadicNavBar({ preset: "angela" })
-
-export const Page =  = <NavBar/>
 ```
-<h2>Technologies</h2>
+$ yarn build
+```
 
-<h3>Dependencies</h3>
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-1. [htm](https://www.npmjs.com/package/htm)
-2. [vite](https://vite.com)
-3. [framer-motion](https://framer.motion)
-4. [tailwindCSS](https://tailwindcss.com)
-(load:docs/AUTHORS.md)
-<h2>⏳Changelog</h2>
+### Deployment
 
+Using SSH:
 
-<h3>v12.0.0</h3>
+```
+$ USE_SSH=true yarn deploy
+```
 
+Not using SSH:
 
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
 
-<h2>©️Copyright</h2>
-
-**©️ 2023 Désirable Solutions. All Rights Reserved.**
-
-<h2>📜License</h2>
-
-> This project is under the GPL-3.0-version license. ☂️
-
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
